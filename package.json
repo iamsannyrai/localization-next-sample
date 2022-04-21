@@ -9,9 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "i18next": "^21.6.16",
     "next": "12.1.5",
+    "ni18n": "^1.0.3",
     "react": "18.0.0",
-    "react-dom": "18.0.0"
+    "react-dom": "18.0.0",
+    "react-i18next": "^11.16.7"
   },
   "devDependencies": {
     "eslint": "8.13.0",

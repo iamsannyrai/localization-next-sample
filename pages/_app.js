@@ -1,7 +1,14 @@
-import '../styles/globals.css'
+import '../public/styles.css'
+import {appWithI18Next, useSyncLanguage} from 'ni18n'
+import {ni18nConfig} from '../ni18n.config'
 
-function MyApp({ Component, pageProps }) {
+const MyApp = ({Component, pageProps}) => {
+  const locale =
+    typeof window !== 'undefined' && window.localStorage.getItem('MY_LANGUAGE')
+
+  useSyncLanguage(locale)
+
   return <Component {...pageProps} />
 }
 
-export default MyApp
+export default appWithI18Next(MyApp, ni18nConfig)
